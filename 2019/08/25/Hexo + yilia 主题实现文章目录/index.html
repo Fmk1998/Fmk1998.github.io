@@ -6,35 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>从0开始搭建自己的个人博客hexo（一） | Hexo</title>
+  <title>Hexo + yilia 主题实现文章目录 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从0开始搭建自己的个人博客hexo（一）手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo 本篇所包含的内容如下：  安装NodeJs 安装 Git 安装hexo 运行测试">
+  <meta name="description" content="Hexo + yilia 主题实现文章目录1.hexo yilia 设置文章显示长度，不展开全文 yilia 主题中可以用">
 <meta name="keywords" content="hexo,NodeJs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从0开始搭建自己的个人博客hexo（一）">
-<meta property="og:url" content="http://yoursite.com/2019/08/25/从0开始搭建自己的个人博客hexo（一）/index.html">
+<meta property="og:title" content="Hexo + yilia 主题实现文章目录">
+<meta property="og:url" content="http://yoursite.com/2019/08/25/Hexo + yilia 主题实现文章目录/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="从0开始搭建自己的个人博客hexo（一）手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo 本篇所包含的内容如下：  安装NodeJs 安装 Git 安装hexo 运行测试">
+<meta property="og:description" content="Hexo + yilia 主题实现文章目录1.hexo yilia 设置文章显示长度，不展开全文 yilia 主题中可以用">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825124134952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825124345228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825130144621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825130158419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825131444993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825131840581.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825131920784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825132101305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825132136486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825132218157.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825134201377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825134218451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825134922424.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825135113874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-08-25T09:57:31.386Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190825162817804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-25T10:02:51.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从0开始搭建自己的个人博客hexo（一）">
-<meta name="twitter:description" content="从0开始搭建自己的个人博客hexo（一）手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo 本篇所包含的内容如下：  安装NodeJs 安装 Git 安装hexo 运行测试">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190825124134952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="Hexo + yilia 主题实现文章目录">
+<meta name="twitter:description" content="Hexo + yilia 主题实现文章目录1.hexo yilia 设置文章显示长度，不展开全文 yilia 主题中可以用">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190825162817804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -170,78 +157,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-从0开始搭建自己的个人博客hexo（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hexo + yilia 主题实现文章目录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      从0开始搭建自己的个人博客hexo（一）
+      Hexo + yilia 主题实现文章目录
     </h1>
   
 
         
-        <a href="/2019/08/25/从0开始搭建自己的个人博客hexo（一）/" class="archive-article-date">
-  	<time datetime="2019-08-25T06:08:53.865Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
+        <a href="/2019/08/25/Hexo + yilia 主题实现文章目录/" class="archive-article-date">
+  	<time datetime="2019-08-25T10:01:55.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="从0开始搭建自己的个人博客hexo（一）"><a href="#从0开始搭建自己的个人博客hexo（一）" class="headerlink" title="从0开始搭建自己的个人博客hexo（一）"></a>从0开始搭建自己的个人博客hexo（一）</h2><p><a href="https://www.bilibili.com/video/av44544186" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a></p>
-<p>本篇所包含的内容如下：</p>
-<ol>
-<li>安装NodeJs</li>
-<li>安装 Git</li>
-<li>安装hexo</li>
-<li>运行测试</li>
-</ol>
- <a id="more"></a>
+        <h2 id="Hexo-yilia-主题实现文章目录"><a href="#Hexo-yilia-主题实现文章目录" class="headerlink" title="Hexo + yilia 主题实现文章目录"></a>Hexo + yilia 主题实现文章目录</h2><p><strong>1.hexo yilia 设置文章显示长度，不展开全文</strong></p>
+<p>yilia 主题中可以用 <a id="more"></a> 截取文章的显示长度，如果你想在哪截取文章，就在那行使用该字符。</p>
+<!-- more --> 
+<p><img src="https://img-blog.csdnimg.cn/20190825162817804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>进入theme目录，打开yilia目录下的_config.yml文件，修改excerpt_link参数：</p>
+<p>excerpt_link：之后的more单词换成空格<br>注：‘excerpt_link： ’。其中：后有一个空格键</p>
+<p><strong>2.hexo yilia 文章标签</strong></p>
+<p>如何给文章加多个标签：</p>
+<p>修改如下图，格式为[tag1, tag2]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 经典算法--最大存水量问题</span><br><span class="line">date: 2018-02-01 17:44:18</span><br><span class="line">tags:</span><br><span class="line">    - 算法</span><br><span class="line">    - 最大存水量</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<p> <strong>1.安装NodeJs</strong></p>
-<pre><code>Hexo是基于nodeJS环境的静态博客。作为服务端运行javascript的平台的NodeJs，把前台javascript移到了服务器端，Google V8引擎使其运行效率非常高，它可以异步，无任何阻塞运行程序。nodejs包含http服务器，可以为我们实现 web系统设计，客户端javascript编译器，等一系列的功能。</code></pre><ul>
-<li><p>下载windows平台nodejs环境安装包，百度一下nodejs官网，找到DOWNLOADS点击，找到Windows Installer 如果为64位电脑可以选择64位版本。点击下载。<img src="https://img-blog.csdnimg.cn/20190825124134952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>安装windows版nodejs，点击下载后的文件安装，然后点next，然后选中同意安装协议，然后点next，然后可以自定义安装目录默认C:\Program Files\nodejs\，然后点next，默认安装全部组件然后点next，然后点击install安装等待，然后点击finish安装完成。<img src="https://img-blog.csdnimg.cn/20190825124345228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ul>
-<p><strong>2.安装Git</strong></p>
-<pre><code>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</code></pre><ul>
-<li><p>打开官方网站<br><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
-</li>
-<li><p>然后我们选择windows版本的下载<br><img src="https://img-blog.csdnimg.cn/20190825130144621.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>安装也是一直点下一步，安装官方默认的来就行</p>
-<p><img src="https://img-blog.csdnimg.cn/20190825130158419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>  Git Bash下载下来就相当于Linux中的终端窗口了，以后我们就用这个来打开终端。</p>
-</li>
-</ul>
-<p><strong>3.安装hexo</strong></p>
-<ul>
-<li><p>先创建一个文件夹（用来存放所有blog的东西），然后cd到该文件夹下。</p>
-</li>
-<li><p>安装hexo命令：npm i -g hexo</p>
-</li>
-<li><p>新建一个文件夹blog<br>打开你的文件夹，然后在空白处点鼠标的右键，选择 ==Git Bash Here==<br>看看 ==node，npm== 是否安装成功。<br><img src="https://img-blog.csdnimg.cn/20190825131444993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>安装cnpm提高速度<br>在上面终端继续输入<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br><img src="https://img-blog.csdnimg.cn/20190825131840581.png" alt="在这里插入图片描述"><br>下载完成<br><img src="https://img-blog.csdnimg.cn/20190825131920784.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>==完成之后安装hexo==<br>cnpm install -g hexo-cli<br><img src="https://img-blog.csdnimg.cn/20190825132101305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>验证是否安装成功<br>hexo -v<br><img src="https://img-blog.csdnimg.cn/20190825132136486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>首先看看当前路径命令pwd<br>结果为<br><img src="https://img-blog.csdnimg.cn/20190825132218157.png" alt="在这里插入图片描述"><br>然后我们<br>运行命令，这步是关键，主要是建立整个项目，这里我的文件夹名字是blog，文件夹位置是桌面上。<br><img src="https://img-blog.csdnimg.cn/20190825134201377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190825134218451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ul>
-<p><strong>4.运行测试</strong><br> 这里我们经常用到的有三个命令</p>
-<ul>
-<li>hexo clean #用来清理缓存文件</li>
-<li>hexo g      #生成文件</li>
-<li>hexo  s     #运行本地服务器</li>
-<li>hexo  d   #上传到服务器</li>
-</ul>
-<p>我们运行</p>
-<ul>
-<li><p>hexo s<br><img src="https://img-blog.csdnimg.cn/20190825134922424.png" alt="在这里插入图片描述"><br>打开浏览器，输入localhost:4000,看到<br><img src="https://img-blog.csdnimg.cn/20190825135113874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以将自己原来的文章导出放到 ==\source_posts==目录下</p>
-<p>本地环境搭建完成。</p>
-</li>
-</ul>
+<p>注：逗号之后要有一个空格。[tag1, tag2]= [tag1+逗号+空格+tag2]</p>
+<p><strong>3.yilia头像/图标设置</strong></p>
+<p><strong>存放位置</strong></p>
+<p>头像/图标图片的存放位置是/themes/yilia/source/下任意位置，可以自己新建一个文件夹存放，我存放在assets文件夹下。</p>
+<p><strong>配置设置</strong></p>
+<p>配置文件为/themes/yilia/_config.yml。设置头像为配置文件中avatar一项，设置图标为配置文件中favicon一项，设置路径的根目录为/themes/yilia/source/。例如，我的头像存放的地址是/themes/yilia/source/assets/me.png，设置则为avatar: /assets/me.png。（图标同理）</p>
 
       
 
@@ -346,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/25/从0开始搭建自己的个人博客hexo（一）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/25/Hexo + yilia 主题实现文章目录/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -360,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/25/从0开始搭建自己的个人博客hexo（二）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          从0开始搭建自己的个人博客hexo（二）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/08/25/从0开始搭建自己的个人博客hexo（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从0开始搭建自己的个人博客hexo（二）</div>
       <i class="icon-circle-right"></i>
     </a>
   

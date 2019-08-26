@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Fmk1998</title>
+  <title>hexo yilia主题添加文章访问量统计 | Fmk1998</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fmk1998">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="1.引入不蒜子 1&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里，我用的yilia主题，放在/themes/yilia/layout/">
+<meta name="keywords" content="hexo,NodeJs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo yilia主题添加文章访问量统计">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/hexo yilia主题添加文章访问量统计/index.html">
 <meta property="og:site_name" content="Fmk1998">
+<meta property="og:description" content="1.引入不蒜子 1&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里，我用的yilia主题，放在/themes/yilia/layout/">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-26T02:11:14.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fmk1998">
+<meta name="twitter:title" content="hexo yilia主题添加文章访问量统计">
+<meta name="twitter:description" content="1.引入不蒜子 1&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里，我用的yilia主题，放在/themes/yilia/layout/">
   
     <link rel="alternative" href="/atom.xml" title="Fmk1998" type="application/atom+xml">
   
@@ -150,36 +155,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo yilia主题添加文章访问量统计" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      hexo yilia主题添加文章访问量统计
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/hexo yilia主题添加文章访问量统计/" class="archive-article-date">
+
+        
+        <a href="/2019/08/26/hexo yilia主题添加文章访问量统计/" class="archive-article-date">
   	<time datetime="2019-08-26T02:08:55.131Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/hexo yilia主题添加文章访问量统计/">hexo yilia主题添加文章访问量统计</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.引入不蒜子</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<p>这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里，我用的yilia主题，放在/themes/yilia/layout/_partial/footer.ejs<br> <a id="more"></a><br><strong>2.添加站点访问量</strong></p>
+<p>通常站点的总访问量会显示在footer的位置，所以我们可以在footer.ejs里加上如下标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt; </span><br><span class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>计算访问量的方法有两种：<br>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。<br>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。<br>我用的是uv的方式，大家自行选择即可。</p>
+<p><strong>3.添加文章访问量</strong></p>
+<p>文章的访问量显示在文章里面，所以在article.ejs里加上文章访问量的标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">   本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我们直接就这样放在yilia主题中，首页也会显示该网页的访问量，没法正常使用，所以我加一个判断，如果是首页不显示该文章的访问量，下面这段代码添加在/themes/yilia/layout/_partial/article.ejs的header的日期后面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if ( !index )&#123; %&gt;</span><br><span class="line">		&lt;span class=&quot;archive-article-date&quot;&gt;</span><br><span class="line">			阅读量 &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">		&lt;/span&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://www.jianshu.com/p/8a8f880f40c0" target="_blank" rel="noopener">转载地址</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,256 +245,122 @@
 		</ul>
 	</div>
 
-          
+	  <span id="busuanzi_container_page_pv">
+  |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/26/hexo yilia主题添加文章访问量统计/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/从0开始搭建自己的个人博客hexo（三）/" class="archive-article-date">
-  	<time datetime="2019-08-26T02:08:26.311Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/26/从0开始搭建自己的个人博客hexo（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从0开始搭建自己的个人博客hexo（三）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/从0开始搭建自己的个人博客hexo（三）/">从0开始搭建自己的个人博客hexo（三）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/hexo+yilia 所有文章模块缺失解决方法/" class="archive-article-date">
-  	<time datetime="2019-08-25T13:40:14.005Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/hexo+yilia 所有文章模块缺失解决方法/">hexo+yilia 所有文章模块缺失解决方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/Hexo + yilia 主题实现文章目录/" class="archive-article-date">
-  	<time datetime="2019-08-25T10:01:55.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/Hexo + yilia 主题实现文章目录/">Hexo + yilia 主题实现文章目录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/从0开始搭建自己的个人博客hexo（二）/" class="archive-article-date">
-  	<time datetime="2019-08-25T07:12:43.776Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/从0开始搭建自己的个人博客hexo（二）/">从0开始搭建自己的个人博客hexo（二）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/从0开始搭建自己的个人博客hexo（一）/" class="archive-article-date">
-  	<time datetime="2019-08-25T06:08:53.865Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/从0开始搭建自己的个人博客hexo（一）/">从0开始搭建自己的个人博客hexo（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-25T05:40:33.302Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -477,8 +393,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

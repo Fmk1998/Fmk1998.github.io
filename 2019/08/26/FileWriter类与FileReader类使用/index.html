@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Fmk1998</title>
+  <title>FileWriter类与FileReader类使用 | Fmk1998</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fmk1998">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+  <meta name="description" content="FileWriter类与FileReader类使用">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FileWriter类与FileReader类使用">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/FileWriter类与FileReader类使用/index.html">
 <meta property="og:site_name" content="Fmk1998">
+<meta property="og:description" content="FileWriter类与FileReader类使用">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-26T08:14:32.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fmk1998">
+<meta name="twitter:title" content="FileWriter类与FileReader类使用">
+<meta name="twitter:description" content="FileWriter类与FileReader类使用">
   
     <link rel="alternative" href="/atom.xml" title="Fmk1998" type="application/atom+xml">
   
@@ -180,74 +185,108 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-FileWriter类与FileReader类使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/学生管理系统IO版/" class="archive-article-date">
-  	<time datetime="2019-08-26T08:12:44.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/学生管理系统IO版/">学生管理系统IO版</a>
+    <h1 class="article-title" itemprop="name">
+      FileWriter类与FileReader类使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/FileWriter类与FileReader类使用/" class="archive-article-date">
+        
+        <a href="/2019/08/26/FileWriter类与FileReader类使用/" class="archive-article-date">
   	<time datetime="2019-08-26T08:02:52.631Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/FileWriter类与FileReader类使用/">FileWriter类与FileReader类使用</a>
-    </h1>
-  
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.4k字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10分</span>
+      </span>
+    </span>
+</div>
           
+        <!-- 添加完成 -->
+		
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="FileWriter类与FileReader类使用"><a href="#FileWriter类与FileReader类使用" class="headerlink" title="FileWriter类与FileReader类使用"></a>FileWriter类与FileReader类使用</h1> <a id="more"></a>
+<h2 id="1FileWriter类使用"><a href="#1FileWriter类使用" class="headerlink" title="1FileWriter类使用"></a>1FileWriter类使用</h2><h3 id="1FileWriter向文件中写数据"><a href="#1FileWriter向文件中写数据" class="headerlink" title="1FileWriter向文件中写数据"></a>1FileWriter向文件中写数据</h3><p>A:FileWriter向文件中写数据操作步骤:<br>      a:使用FileWriter流关联文件<br>      b:利用FileWriter的写方法写数据<br>      c:利用FileWriter的刷新方法将数据从内存刷到硬盘上<br>      d:利用FileWriter的关闭流方法将释放占用的系统底层资源<br>   B:FileWriter方法:<br>构造方法<br>FileWriter(String fileName)  传入一个文件的路径<br>成员方法<br>void write(String str)  向文件中写str<br>void flush()  将内存中的数据刷新到文件中<br>void close()  关流释放系统底层资源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line">* @ClassName: FileWriterDemo  </span><br><span class="line">* @Description: FileWriter往文件中写数据</span><br><span class="line">* @date 2017年10月14日 下午1:25:20    </span><br><span class="line">* Company www.igeekhome.com</span><br><span class="line">*    </span><br><span class="line"> * 需求：往文件中写数据</span><br><span class="line"> * 		写数据--输出流--FileWriter</span><br><span class="line"> * </span><br><span class="line"> * FileWriter:</span><br><span class="line"> * 		FileWriter(String fileName):传递一个文件名称</span><br><span class="line"> * </span><br><span class="line"> * 输出流写数据的步骤：</span><br><span class="line"> * 		A:创建输出流对象</span><br><span class="line"> * 		B:调用输出流对象的写数据的方法</span><br><span class="line"> * 		C:释放资源</span><br><span class="line"> */</span><br><span class="line">public class FileWriterDemo &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;d:\\a.txt&quot;);</span><br><span class="line">		/*</span><br><span class="line">		 * 创建输出流对象做了哪些事情:</span><br><span class="line">		 * 		A:调用系统资源创建了一个文件</span><br><span class="line">		 * 		B:创建输出流对象</span><br><span class="line">		 * 		C:把输出流对象指向文件</span><br><span class="line">		 */</span><br><span class="line">		</span><br><span class="line">		//调用输出流对象的写数据的方法</span><br><span class="line">		//写一个字符串数据</span><br><span class="line">		fw.write(&quot;IO流你好&quot;);</span><br><span class="line">		//数据没有直接写到文件，其实是写到了内存缓冲区</span><br><span class="line">		fw.flush();</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		//通知系统释放和该文件相关的资源</span><br><span class="line">		fw.close();</span><br><span class="line">		</span><br><span class="line">		//while(true) &#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: FileWriterDemo2  </span><br><span class="line"> * @Description: FileWriter注意事项</span><br><span class="line"> * @date 2017年10月14日 下午1:30:07    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * 输出流写数据的步骤：</span><br><span class="line"> * 		A:创建输出流对象</span><br><span class="line"> * 		B:调用输出流对象的写数据方法，并刷新缓冲区</span><br><span class="line"> * 		C:释放资源</span><br><span class="line"> * </span><br><span class="line"> * 相对路径：相对当前项目而言的，在项目的根目录下(a.txt)</span><br><span class="line"> * 绝对路径：以盘符开始的路径(d:\\a.txt)</span><br><span class="line"> * </span><br><span class="line"> * close()和flush()方法的区别：</span><br><span class="line"> * 		flush():刷新缓冲区。流对象还可以继续使用。</span><br><span class="line"> * 		close():先刷新缓冲区，然后通知系统释放资源。流对象不可以再被使用了。</span><br><span class="line"> */</span><br><span class="line">public class FileWriterDemo2 &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		//FileWriter fw = new FileWriter(&quot;d:\\a.txt&quot;);</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;a.txt&quot;);</span><br><span class="line">		</span><br><span class="line">		//调用输出流对象的写数据方法，并刷新缓冲区</span><br><span class="line">		fw.write(&quot;helloworld&quot;);</span><br><span class="line">		fw.flush();</span><br><span class="line">		fw.write(&quot;java&quot;);</span><br><span class="line">		fw.flush();</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fw.close();</span><br><span class="line">		</span><br><span class="line">		//Stream closed</span><br><span class="line">		//fw.write(&quot;javaee&quot;);</span><br><span class="line">		//fw.flush();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: FileWriterDemo3  </span><br><span class="line"> * @Description: FileWriter其它写方法</span><br><span class="line"> * @date 2017年10月14日 下午1:36:18    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * void write(String str):写一个字符串数据</span><br><span class="line"> * void write(String str,int index,int len):写一个字符串中的一部分数据</span><br><span class="line"> * void write(int ch):写一个字符数据,这里写int类型的好处是既可以写char类型的数据，也可以写char对应的int类型的值。&apos;a&apos;,97</span><br><span class="line"> * void write(char[] chs):写一个字符数组数据</span><br><span class="line"> * void write(char[] chs,int index,int len):写一个字符数组的一部分数据</span><br><span class="line"> */</span><br><span class="line">public class FileWriterDemo3 &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;b.txt&quot;);</span><br><span class="line">		</span><br><span class="line">		//void write(String str):写一个字符串数据</span><br><span class="line">		//fw.write(&quot;abcde&quot;);</span><br><span class="line">		</span><br><span class="line">		//void write(String str,int index,int len):写一个字符串中的一部分数据</span><br><span class="line">		//fw.write(&quot;abcde&quot;,0,5);</span><br><span class="line">		//fw.write(&quot;abcde&quot;,1,3);</span><br><span class="line">		</span><br><span class="line">		//void write(int ch):写一个字符数据,这里写int类型的好处是既可以写char类型的数据，也可以写char对应的int类型的值。&apos;a&apos;,97</span><br><span class="line">		//fw.write(&apos;a&apos;);</span><br><span class="line">		//fw.write(97);</span><br><span class="line">		</span><br><span class="line">		//void write(char[] chs):写一个字符数组数据</span><br><span class="line">		char[] chs = &#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;&#125;;</span><br><span class="line">		//fw.write(chs);</span><br><span class="line">		</span><br><span class="line">		//void write(char[] chs,int index,int len):写一个字符数组的一部分数据</span><br><span class="line">		//fw.write(chs,0,5);</span><br><span class="line">		fw.write(chs,2,3);</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fw.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2FileWriter写入换行以及向文本末尾追加"><a href="#2FileWriter写入换行以及向文本末尾追加" class="headerlink" title="2FileWriter写入换行以及向文本末尾追加"></a>2FileWriter写入换行以及向文本末尾追加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: FileWriterDemo4  </span><br><span class="line"> * @Description: FileWriter写入换行以及向文本末尾追加</span><br><span class="line"> * @date 2017年10月14日 下午1:41:34    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * 如何实现数据的换行?</span><br><span class="line"> * 		\n可以实现换行，但是windows系统自带的记事本打开并没有换行，这是为什么呢?</span><br><span class="line"> * 		因为windows识别的换行不是\n，而是\r\n</span><br><span class="line"> * 		windows:\r\n</span><br><span class="line"> * 		linux:\n</span><br><span class="line"> * 		mac:\r</span><br><span class="line"> * 如何实现数据的追加写入?</span><br><span class="line"> * 		FileWriter(String fileName, boolean append)</span><br><span class="line"> */</span><br><span class="line">public class FileWriterDemo4 &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		//FileWriter fw = new FileWriter(&quot;c.txt&quot;);</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;c.txt&quot;,true); //表示追加写入，默认是false</span><br><span class="line">				</span><br><span class="line">		for(int x=0; x&lt;10; x++) &#123;</span><br><span class="line">			fw.write(&quot;hello&quot;+x);</span><br><span class="line">			fw.write(&quot;\r\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fw.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileReader类使用"><a href="#FileReader类使用" class="headerlink" title="FileReader类使用"></a>FileReader类使用</h2><h3 id="FileReader从文件中读数据"><a href="#FileReader从文件中读数据" class="headerlink" title="FileReader从文件中读数据"></a>FileReader从文件中读数据</h3><p>FileReader方法:<br>构造方法<br>FileReader(String fileName)  传入一个文件的路径<br>成员方法<br>int read()  读取单个字符<br>int read(char[] cbuf)  读取字符，并将字符读入数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_01;</span><br><span class="line"></span><br><span class="line">import java.io.FileReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: FileReaderDemo  </span><br><span class="line"> * @Description: 从文件中读数据并显示到控制台</span><br><span class="line"> * @date 2017年10月14日 下午1:45:52    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * 需求：从文件中读数据并显示到控制台</span><br><span class="line"> * 		读数据--输入流--FileReader</span><br><span class="line"> * </span><br><span class="line"> * FileReader:</span><br><span class="line"> * 		FileReader(String fileName):传递文件名称</span><br><span class="line"> * </span><br><span class="line"> * 输入流读文件的步骤：</span><br><span class="line"> * 		A:创建输入流对象</span><br><span class="line"> * 		B:调用输入流对象的读数据方法</span><br><span class="line"> * 		C:释放资源</span><br><span class="line"> * </span><br><span class="line"> * java.io.FileNotFoundException: fr.txt (系统找不到指定的文件。)</span><br><span class="line"> */</span><br><span class="line">public class FileReaderDemo &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输入流对象</span><br><span class="line">		//FileReader fr = new FileReader(&quot;fr.txt&quot;);</span><br><span class="line">		FileReader fr = new FileReader(&quot;FileWriterDemo.java&quot;);</span><br><span class="line">		</span><br><span class="line">		//调用输入流对象的读数据方法</span><br><span class="line">		//int read():一次读取一个字符</span><br><span class="line">		</span><br><span class="line">		/*</span><br><span class="line">		//第一次读数据</span><br><span class="line">		int ch = fr.read();</span><br><span class="line">		System.out.println(ch);</span><br><span class="line">		System.out.println((char)ch);</span><br><span class="line">		</span><br><span class="line">		//第二次读数据</span><br><span class="line">		ch = fr.read();</span><br><span class="line">		System.out.println(ch);</span><br><span class="line">		System.out.println((char)ch);</span><br><span class="line">		</span><br><span class="line">		//第三次读数据</span><br><span class="line">		ch = fr.read();</span><br><span class="line">		System.out.println(ch);</span><br><span class="line">		System.out.println((char)ch);</span><br><span class="line">		</span><br><span class="line">		//这是时候，我们发现代码的重复度很高，想用循环改进，但是不知道循环的结束条件是什么</span><br><span class="line">		ch = fr.read();</span><br><span class="line">		System.out.println(ch);</span><br><span class="line">		</span><br><span class="line">		ch = fr.read();</span><br><span class="line">		System.out.println(ch);</span><br><span class="line">		//通过测试，我们知道，如果读取数据的返回值是-1的时候，就说明没有数据了，这也是我们循环的结束条件</span><br><span class="line">		*/</span><br><span class="line">		</span><br><span class="line">		int ch;</span><br><span class="line">		//1:fr.read()</span><br><span class="line">		//2:ch=fr.read()</span><br><span class="line">		//3:ch != -1</span><br><span class="line">		while((ch=fr.read())!=-1) &#123;</span><br><span class="line">			//System.out.println(ch);</span><br><span class="line">			//System.out.println((char)ch);</span><br><span class="line">			System.out.print((char)ch);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fr.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_01;</span><br><span class="line"></span><br><span class="line">import java.io.FileReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line">* @ClassName: FileReaderDemo2  </span><br><span class="line">* @Description: FileReader读数据一次读取一个字符数组的数据</span><br><span class="line">* @date 2017年10月14日 下午7:36:42    </span><br><span class="line">* Company www.igeekhome.com</span><br><span class="line">*    </span><br><span class="line">*    输入流读文件的步骤：</span><br><span class="line">*    	A：创建输入流对象</span><br><span class="line">*    	B：调用输入流对象的读数据方法</span><br><span class="line">*    	C：释放资源</span><br><span class="line">*/</span><br><span class="line">public class FileReaderDemo2 &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输入流对象</span><br><span class="line">		//FileReader fr = new FileReader(&quot;fr2.txt&quot;);</span><br><span class="line">		FileReader fr = new FileReader(&quot;FileReaderDemo.java&quot;);</span><br><span class="line">		</span><br><span class="line">		//调用输入流对象的读数据方法</span><br><span class="line">				</span><br><span class="line">		/*</span><br><span class="line">		char[] chs=new char[5];</span><br><span class="line">		//第一次读取</span><br><span class="line">		int len=fr.read(chs);</span><br><span class="line">		System.out.println(len);</span><br><span class="line">		//System.out.println(chs);</span><br><span class="line">		System.out.println(new String(chs, 0, len));</span><br><span class="line">		</span><br><span class="line">		//第二次读取</span><br><span class="line">		len=fr.read(chs);</span><br><span class="line">		System.out.println(len);</span><br><span class="line">		//System.out.println(chs);</span><br><span class="line">		System.out.println(new String(chs, 0, len));</span><br><span class="line">		</span><br><span class="line">		//第三次读取</span><br><span class="line">		len=fr.read(chs);</span><br><span class="line">		System.out.println(len);</span><br><span class="line">		//System.out.println(chs);</span><br><span class="line">		System.out.println(new String(chs, 0, len));</span><br><span class="line">		</span><br><span class="line">		//我们发现读取代码的方式相似度很高，想用循环改进，但是不知道什么时候会结束循环</span><br><span class="line">		len=fr.read(chs);</span><br><span class="line">		System.out.println(len);</span><br><span class="line">		len=fr.read(chs);</span><br><span class="line">		System.out.println(len);</span><br><span class="line">		//通过测试，我们知道，如果实际读取长度是-1的时候，说明没有数据了</span><br><span class="line">		 */</span><br><span class="line">		</span><br><span class="line">		char[] chs=new char[5];</span><br><span class="line">		int len;</span><br><span class="line">		//A:fr.read(chs)</span><br><span class="line">		//B:len=fr.read(chs)</span><br><span class="line">		//C:len!=-1</span><br><span class="line">		while((len=fr.read(chs))!=-1)&#123;</span><br><span class="line">			//System.out.println(new String(chs,0,len));</span><br><span class="line">			System.out.print(new String(chs,0,len));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fr.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3利用FileReader和FileWriter完成文件复制"><a href="#3利用FileReader和FileWriter完成文件复制" class="headerlink" title="3利用FileReader和FileWriter完成文件复制"></a>3利用FileReader和FileWriter完成文件复制</h2><h3 id="读一次写一次"><a href="#读一次写一次" class="headerlink" title="读一次写一次"></a>读一次写一次</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileReader;</span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: CopyFileDemo  </span><br><span class="line"> * @Description: 文件复制拷贝</span><br><span class="line"> * @date 2017年10月14日 下午1:48:48    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * 需求：</span><br><span class="line"> * 		把项目路径下的FileWriterDemo.java中的内容复制到项目路径下的Copy.java中</span><br><span class="line"> * </span><br><span class="line"> * 文件复制也是有规律可循的，也就是说有套路。</span><br><span class="line"> * </span><br><span class="line"> * 数据源：</span><br><span class="line"> * 		FileWriterDemo.java -- 读数据 -- FileReader</span><br><span class="line"> * 目的地：</span><br><span class="line"> * 		Copy.java -- 写数据 -- FileWriter</span><br><span class="line"> */</span><br><span class="line">public class CopyFileDemo &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输入流对象</span><br><span class="line">		FileReader fr = new FileReader(&quot;FileWriterDemo.java&quot;);</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;Copy.java&quot;);</span><br><span class="line">		</span><br><span class="line">		//读写数据</span><br><span class="line">		int ch;</span><br><span class="line">		while((ch=fr.read())!=-1) &#123;</span><br><span class="line">			fw.write(ch);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fw.close();</span><br><span class="line">		fr.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="利用字符数组拷贝文件"><a href="#利用字符数组拷贝文件" class="headerlink" title="利用字符数组拷贝文件"></a>利用字符数组拷贝文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">package com.igeek_02;</span><br><span class="line"></span><br><span class="line">import java.io.FileReader;</span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">/**  </span><br><span class="line"> * @ClassName: CopyFileDemo2  </span><br><span class="line"> * @Description: 利用字符数组拷贝文件</span><br><span class="line"> * @date 2017年10月14日 下午1:51:16    </span><br><span class="line"> * Company www.igeekhome.com</span><br><span class="line"> *    </span><br><span class="line"> * 需求：</span><br><span class="line"> * 		把项目路径下的FileWriterDemo.java中的内容复制到项目路径下的Copy.java中</span><br><span class="line"> * </span><br><span class="line"> * 数据源：</span><br><span class="line"> * 		FileWriterDemo.java -- 读数据 -- FileReader</span><br><span class="line"> * 目的地：</span><br><span class="line"> * 		Copy.java -- 写数据 -- FileWriter</span><br><span class="line"> */</span><br><span class="line">public class CopyFileDemo2 &#123;</span><br><span class="line">	public static void main(String[] args) throws IOException &#123;</span><br><span class="line">		//创建输入流对象</span><br><span class="line">		FileReader fr  = new FileReader(&quot;FileWriterDemo.java&quot;);</span><br><span class="line">		//创建输出流对象</span><br><span class="line">		FileWriter fw = new FileWriter(&quot;Copy.java&quot;);</span><br><span class="line">		</span><br><span class="line">		//读写数据</span><br><span class="line">		char[] chs = new char[1024];</span><br><span class="line">		int len;</span><br><span class="line">		while((len=fr.read(chs))!=-1) &#123;</span><br><span class="line">			fw.write(chs, 0, len);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//释放资源</span><br><span class="line">		fw.close();</span><br><span class="line">		fr.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -259,326 +298,130 @@
 		</ul>
 	</div>
 
-          
+	  <span id="busuanzi_container_page_pv">
+  |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/26/FileWriter类与FileReader类使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/学生管理系统案例/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:53:18.250Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/26/学生管理系统IO版/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          学生管理系统IO版
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/26/学生管理系统案例/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学生管理系统案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/学生管理系统案例/">学生管理系统案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#FileWriter类与FileReader类使用"><span class="toc-number">1.</span> <span class="toc-text">FileWriter类与FileReader类使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1FileWriter类使用"><span class="toc-number">1.1.</span> <span class="toc-text">1FileWriter类使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1FileWriter向文件中写数据"><span class="toc-number">1.1.1.</span> <span class="toc-text">1FileWriter向文件中写数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2FileWriter写入换行以及向文本末尾追加"><span class="toc-number">1.1.2.</span> <span class="toc-text">2FileWriter写入换行以及向文本末尾追加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FileReader类使用"><span class="toc-number">1.2.</span> <span class="toc-text">FileReader类使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FileReader从文件中读数据"><span class="toc-number">1.2.1.</span> <span class="toc-text">FileReader从文件中读数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3利用FileReader和FileWriter完成文件复制"><span class="toc-number">1.3.</span> <span class="toc-text">3利用FileReader和FileWriter完成文件复制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#读一次写一次"><span class="toc-number">1.3.1.</span> <span class="toc-text">读一次写一次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用字符数组拷贝文件"><span class="toc-number">1.3.2.</span> <span class="toc-text">利用字符数组拷贝文件</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/判断一个字符串是否是对称字符串/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:39:12.319Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/判断一个字符串是否是对称字符串/">判断一个字符串是否是对称字符串</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/利用StringBuilder完成字符串反转/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:36:12.605Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/利用StringBuilder完成字符串反转/">利用StringBuilder完成字符串反转</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/利用StringBuilder把数组拼接成一个字符串/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:35:08.002Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/利用StringBuilder把数组拼接成一个字符串/">利用StringBuilder把数组拼接成一个字符串</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA数组反转/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:26:31.801Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA数组反转/">JAVA数组反转</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例二(获取三个数中的最大值)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:43.258Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例二(获取三个数中的最大值)/">JAVA案例二(获取三个数中的最大值)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例三(键盘录入三个数据获取最大值)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:37.060Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例三(键盘录入三个数据获取最大值)/">JAVA案例三(键盘录入三个数据获取最大值)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例四(for循环实现统计水仙花的个数)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:27.236Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例四(for循环实现统计水仙花的个数)/">for循环实现统计水仙花的个数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/08/page/2/">2</a><a class="page-number" href="/archives/2019/08/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/08/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -612,8 +455,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

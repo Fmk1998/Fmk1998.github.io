@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Fmk1998</title>
+  <title>案例2-添加商品 | Fmk1998</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fmk1998">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="案例2-添加商品">
+<meta name="keywords" content="IGeek,JSP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="案例2-添加商品">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/IGeek案例2-添加商品/index.html">
 <meta property="og:site_name" content="Fmk1998">
+<meta property="og:description" content="案例2-添加商品">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190826202210890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-26T12:30:21.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fmk1998">
+<meta name="twitter:title" content="案例2-添加商品">
+<meta name="twitter:description" content="案例2-添加商品">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190826202210890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="Fmk1998" type="application/atom+xml">
   
@@ -180,405 +187,243 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-IGeek案例2-添加商品" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      案例2-添加商品
+    </h1>
+  
+
+        
+        <a href="/2019/08/26/IGeek案例2-添加商品/" class="archive-article-date">
+  	<time datetime="2019-08-26T12:28:21.378Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">3.8k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">22分</span>
+      </span>
+    </span>
+</div>
+          
+        <!-- 添加完成 -->
+		
+		
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="案例2-添加商品"><a href="#案例2-添加商品" class="headerlink" title="案例2-添加商品"></a>案例2-添加商品</h1> <a id="more"></a>
+<h2 id="1-页面一加载就能动态的获取所有的分类"><a href="#1-页面一加载就能动态的获取所有的分类" class="headerlink" title="1 页面一加载就能动态的获取所有的分类"></a>1 页面一加载就能动态的获取所有的分类</h2><p><img src="https://img-blog.csdnimg.cn/20190826202210890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ZtazEwMjM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="1-创建category表"><a href="#1-创建category表" class="headerlink" title="1 创建category表"></a>1 创建category表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE category (</span><br><span class="line">  cid   VARCHAR(50) NOT NULL,</span><br><span class="line">  cname VARCHAR(20) DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (cid)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-category表中添加数据"><a href="#2-category表中添加数据" class="headerlink" title="2 category表中添加数据"></a>2 category表中添加数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO category VALUES </span><br><span class="line">(&apos;1&apos;,&apos;手机数码&apos;),(&apos;2&apos;,&apos;运动户外&apos;),</span><br><span class="line">(&apos;3&apos;,&apos;电脑办公&apos;),(&apos;4&apos;,&apos;家具家居&apos;),</span><br><span class="line">(&apos;5&apos;,&apos;鞋靴箱包&apos;),(&apos;6&apos;,&apos;图书音像&apos;),</span><br><span class="line">(&apos;7&apos;,&apos;母婴孕婴&apos;),(&apos;8&apos;,&apos;汽车用品&apos;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3admin-product-list-jsp添加处理servlet"><a href="#3admin-product-list-jsp添加处理servlet" class="headerlink" title="3admin/product/list.jsp添加处理servlet"></a>3admin/product/list.jsp添加处理servlet</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">&lt;HEAD&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;zh-cn&quot;&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">&lt;link href=&quot;$&#123;pageContext.request.contextPath&#125;/css/Style1.css&quot;</span><br><span class="line">    rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</span><br><span class="line">&lt;script language=&quot;javascript&quot;</span><br><span class="line">    src=&quot;$&#123;pageContext.request.contextPath&#125;/js/public.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">            function addProduct()&#123;</span><br><span class="line">                window.location.href = &quot;$&#123;pageContext.request.contextPath&#125;/adminAddProductUI&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">&lt;/HEAD&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;form id=&quot;Form1&quot; name=&quot;Form1&quot;</span><br><span class="line">        action=&quot;$&#123;pageContext.request.contextPath&#125;/user/list.jsp&quot;</span><br><span class="line">        method=&quot;post&quot;&gt;</span><br><span class="line">        &lt;table cellSpacing=&quot;1&quot; cellPadding=&quot;0&quot; width=&quot;100%&quot; align=&quot;center&quot;</span><br><span class="line">            bgColor=&quot;#f5fafe&quot; border=&quot;0&quot;&gt;</span><br><span class="line">            &lt;TBODY&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; align=&quot;center&quot; bgColor=&quot;#afd1f3&quot;&gt;&lt;strong&gt;商品列表&lt;/strong&gt;</span><br><span class="line">                    &lt;/TD&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; align=&quot;right&quot;&gt;</span><br><span class="line">                        &lt;button type=&quot;button&quot; id=&quot;add&quot; name=&quot;add&quot; value=&quot;添加&quot;</span><br><span class="line">                            class=&quot;button_add&quot; onclick=&quot;addProduct()&quot;&gt;</span><br><span class="line">                            添加&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot;&gt;</span><br><span class="line">                        &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;1&quot; rules=&quot;all&quot;</span><br><span class="line">                            bordercolor=&quot;gray&quot; border=&quot;1&quot; id=&quot;DataGrid1&quot;</span><br><span class="line">                            style=&quot;BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word&quot;&gt;</span><br><span class="line">                            &lt;tr</span><br><span class="line">                                style=&quot;FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3&quot;&gt;</span><br><span class="line"></span><br><span class="line">                                &lt;td align=&quot;center&quot; width=&quot;18%&quot;&gt;序号&lt;/td&gt;</span><br><span class="line">                                &lt;td align=&quot;center&quot; width=&quot;17%&quot;&gt;商品图片&lt;/td&gt;</span><br><span class="line">                                &lt;td align=&quot;center&quot; width=&quot;17%&quot;&gt;商品名称&lt;/td&gt;</span><br><span class="line">                                &lt;td align=&quot;center&quot; width=&quot;17%&quot;&gt;商品价格&lt;/td&gt;</span><br><span class="line">                                &lt;td align=&quot;center&quot; width=&quot;17%&quot;&gt;是否热门&lt;/td&gt;</span><br><span class="line">                                &lt;td width=&quot;7%&quot; align=&quot;center&quot;&gt;编辑&lt;/td&gt;</span><br><span class="line">                                &lt;td width=&quot;7%&quot; align=&quot;center&quot;&gt;删除&lt;/td&gt;</span><br><span class="line">                            &lt;/tr&gt;</span><br><span class="line">                            &lt;!-- varStatus 记录第几次遍历 --&gt;</span><br><span class="line">                            &lt;c:forEach items=&quot;$&#123;productList &#125;&quot; var=&quot;product&quot; varStatus=&quot;vs&quot;&gt;</span><br><span class="line">                            </span><br><span class="line">                                &lt;tr onmouseover=&quot;this.style.backgroundColor = &apos;white&apos;&quot;</span><br><span class="line">                                    onmouseout=&quot;this.style.backgroundColor = &apos;#F5FAFE&apos;;&quot;&gt;</span><br><span class="line">                                    &lt;td style=&quot;CURSOR: hand; HEIGHT: 22px&quot; align=&quot;center&quot;</span><br><span class="line">                                        width=&quot;18%&quot;&gt;$&#123;vs.count &#125;&lt;/td&gt;</span><br><span class="line">                                    &lt;td style=&quot;CURSOR: hand; HEIGHT: 22px&quot; align=&quot;center&quot;</span><br><span class="line">                                        width=&quot;17%&quot;&gt;&lt;img width=&quot;40&quot; height=&quot;45&quot; src=&quot;$&#123;pageContext.request.contextPath &#125;/$&#123;product.pimage &#125;&quot;&gt;&lt;/td&gt;</span><br><span class="line">                                    &lt;td style=&quot;CURSOR: hand; HEIGHT: 22px&quot; align=&quot;center&quot;</span><br><span class="line">                                        width=&quot;17%&quot;&gt;$&#123;product.pname &#125;&lt;/td&gt;</span><br><span class="line">                                    &lt;td style=&quot;CURSOR: hand; HEIGHT: 22px&quot; align=&quot;center&quot;</span><br><span class="line">                                        width=&quot;17%&quot;&gt;$&#123;product.shop_price &#125;&lt;/td&gt;</span><br><span class="line">                                    &lt;td style=&quot;CURSOR: hand; HEIGHT: 22px&quot; align=&quot;center&quot;</span><br><span class="line">                                        width=&quot;17%&quot;&gt;</span><br><span class="line">                                        $&#123;product.is_hot==1?&quot;是&quot;:&quot;否&quot; &#125;&lt;/td&gt;</span><br><span class="line">                                    &lt;td align=&quot;center&quot; style=&quot;HEIGHT: 22px&quot;&gt;&lt;a</span><br><span class="line">                                        href=&quot;$&#123; pageContext.request.contextPath &#125;/admin/product/edit.jsp&quot;&gt;</span><br><span class="line">                                            &lt;img</span><br><span class="line">                                            src=&quot;$&#123;pageContext.request.contextPath&#125;/images/i_edit.gif&quot;</span><br><span class="line">                                            border=&quot;0&quot; style=&quot;CURSOR: hand&quot;&gt;</span><br><span class="line">                                    &lt;/a&gt;&lt;/td&gt;</span><br><span class="line">        </span><br><span class="line">                                    &lt;td align=&quot;center&quot; style=&quot;HEIGHT: 22px&quot;&gt;&lt;a href=&quot;#&quot;&gt; &lt;img</span><br><span class="line">                                            src=&quot;$&#123;pageContext.request.contextPath&#125;/images/i_del.gif&quot;</span><br><span class="line">                                            width=&quot;16&quot; height=&quot;16&quot; border=&quot;0&quot; style=&quot;CURSOR: hand&quot;&gt;</span><br><span class="line">                                    &lt;/a&gt;&lt;/td&gt;</span><br><span class="line">                                &lt;/tr&gt;</span><br><span class="line">                            &lt;/c:forEach&gt;</span><br><span class="line">                        &lt;/table&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">            &lt;/TBODY&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-web层-AdminAddProductUIServlet"><a href="#4-web层-AdminAddProductUIServlet" class="headerlink" title="4 web层 AdminAddProductUIServlet"></a>4 web层 AdminAddProductUIServlet</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package www.test.web;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import javax.servlet.ServletException;</span><br><span class="line">import javax.servlet.http.HttpServlet;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line">import www.test.domain.Category;</span><br><span class="line">import www.test.service.AdminProductService;</span><br><span class="line"></span><br><span class="line">public class AdminAddProductUIServlet extends HttpServlet &#123;</span><br><span class="line"></span><br><span class="line">    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">        //获得所有的商品的类别数据</span><br><span class="line">         AdminProductService service = new AdminProductService();</span><br><span class="line">         List&lt;Category&gt; categoryList = null;</span><br><span class="line">         try &#123;</span><br><span class="line">            categoryList =  service.findAllCategory();</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            </span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        // 将获取到的categoryList存储到request域中</span><br><span class="line">         request.setAttribute(&quot;categoryList&quot;, categoryList);</span><br><span class="line">           //转发</span><br><span class="line">         request.getRequestDispatcher(&quot;/admin/product/add.jsp&quot;).forward(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line">        doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-service层AdminProductService"><a href="#5-service层AdminProductService" class="headerlink" title="5 service层AdminProductService"></a>5 service层AdminProductService</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package www.test.service;</span><br><span class="line"></span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import www.test.dao.AdminProductDao;</span><br><span class="line">import www.test.domain.Category;</span><br><span class="line">import www.test.domain.Product;</span><br><span class="line"></span><br><span class="line">public class AdminProductService &#123;</span><br><span class="line"></span><br><span class="line">    public List&lt;Product&gt; findAllProduct() throws SQLException &#123;</span><br><span class="line"></span><br><span class="line">         //因为没有复杂业务 直接传递请求到dao层</span><br><span class="line">        AdminProductDao dao = new AdminProductDao();</span><br><span class="line">        return dao.findAllProduct();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    public List&lt;Category&gt; findAllCategory() throws SQLException &#123;</span><br><span class="line">        </span><br><span class="line">        AdminProductDao dao = new AdminProductDao();</span><br><span class="line">        return dao.finAllCategory();</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-dao层AdminProductDao"><a href="#6-dao层AdminProductDao" class="headerlink" title="6 dao层AdminProductDao"></a>6 dao层AdminProductDao</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package www.test.dao;</span><br><span class="line"></span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.apache.commons.dbutils.QueryRunner;</span><br><span class="line">import org.apache.commons.dbutils.handlers.BeanListHandler;</span><br><span class="line"></span><br><span class="line">import www.test.domain.Category;</span><br><span class="line">import www.test.domain.Product;</span><br><span class="line">import www.test.utils.C3P0Utils;</span><br><span class="line"></span><br><span class="line">public class AdminProductDao &#123;</span><br><span class="line"></span><br><span class="line">    public List&lt;Product&gt; findAllProduct() throws SQLException &#123;</span><br><span class="line">        </span><br><span class="line">        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());</span><br><span class="line">        String sql = &quot;select * from product&quot;;</span><br><span class="line">        List&lt;Product&gt; productList = qr.query(sql, new BeanListHandler&lt;Product&gt;(Product.class));</span><br><span class="line">        return productList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public List&lt;Category&gt; finAllCategory() throws SQLException &#123;</span><br><span class="line">        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());</span><br><span class="line">        String sql = &quot;select * from category&quot;;</span><br><span class="line">        List&lt;Category&gt; categoryList = qr.query(sql, new BeanListHandler&lt;Category&gt;(Category.class));</span><br><span class="line">        return categoryList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-admin-product-add-jsp代码"><a href="#7-admin-product-add-jsp代码" class="headerlink" title="7 /admin/product/add.jsp代码"></a>7 /admin/product/add.jsp代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</span><br><span class="line"></span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">    &lt;HEAD&gt;</span><br><span class="line">        &lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;zh-cn&quot;&gt;</span><br><span class="line">        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">        &lt;LINK href=&quot;$&#123;pageContext.request.contextPath&#125;/css/Style1.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">    &lt;/HEAD&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!--  --&gt;</span><br><span class="line">        &lt;form id=&quot;userAction_save_do&quot; name=&quot;Form1&quot; action=&quot;$&#123;pageContext.request.contextPath&#125;/adminAddProductUI&quot; method=&quot;post&quot;&gt;</span><br><span class="line">            &amp;nbsp;</span><br><span class="line">            &lt;table cellSpacing=&quot;1&quot; cellPadding=&quot;5&quot; width=&quot;100%&quot; align=&quot;center&quot; bgColor=&quot;#eeeeee&quot; style=&quot;border: 1px solid #8ba7e3&quot; border=&quot;0&quot;&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; align=&quot;center&quot; bgColor=&quot;#afd1f3&quot; colSpan=&quot;4&quot;</span><br><span class="line">                        height=&quot;26&quot;&gt;</span><br><span class="line">                        &lt;strong&gt;&lt;STRONG&gt;添加商品&lt;/STRONG&gt;</span><br><span class="line">                        &lt;/strong&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品名称：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;pname&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        是否热门：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;select name=&quot;is_hot&quot;&gt;</span><br><span class="line">                            &lt;option value=&quot;1&quot;&gt;是&lt;/option&gt;</span><br><span class="line">                            &lt;option value=&quot;0&quot;&gt;否&lt;/option&gt;</span><br><span class="line">                        &lt;/select&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        市场价格：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;market_price&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商城价格：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;shop_price&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品图片：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;file&quot; name=&quot;pimage&quot; /&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        所属分类：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;select name=&quot;cid&quot;&gt;</span><br><span class="line">                            &lt;c:forEach items=&quot;$&#123;categoryList &#125;&quot; var=&quot;category&quot;&gt;</span><br><span class="line">                                    &lt;option value=&quot;$&#123;category.cid &#125;&quot;&gt;$&#123;category.cname &#125;&lt;/option&gt;</span><br><span class="line">                            &lt;/c:forEach&gt;</span><br><span class="line">                            </span><br><span class="line">                        &lt;/select&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品描述：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;textarea name=&quot;pdesc&quot; rows=&quot;5&quot; cols=&quot;30&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; style=&quot;WIDTH: 100%&quot; align=&quot;center&quot;</span><br><span class="line">                        bgColor=&quot;#f5fafe&quot; colSpan=&quot;4&quot;&gt;</span><br><span class="line">                        &lt;button type=&quot;submit&quot; id=&quot;userAction_save_do_submit&quot; value=&quot;确定&quot; class=&quot;button_ok&quot;&gt;</span><br><span class="line">                            确认;</span><br><span class="line">                        &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;FONT face=&quot;宋体&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/FONT&gt;</span><br><span class="line">                        &lt;button type=&quot;reset&quot; value=&quot;重置&quot; class=&quot;button_cancel&quot;&gt;重置&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;FONT face=&quot;宋体&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/FONT&gt;</span><br><span class="line">                        &lt;INPUT class=&quot;button_ok&quot; type=&quot;button&quot; onclick=&quot;history.go(-1)&quot; value=&quot;返回&quot;/&gt;</span><br><span class="line">                        &lt;span id=&quot;Label1&quot;&gt;&lt;/span&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/table&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加商品"><a href="#2-添加商品" class="headerlink" title="2 添加商品"></a>2 添加商品</h2><h3 id="1-给确认按钮所在表单的form添加servlet"><a href="#1-给确认按钮所在表单的form添加servlet" class="headerlink" title="1 给确认按钮所在表单的form添加servlet"></a>1 给确认按钮所在表单的form添加servlet</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</span><br><span class="line"></span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">    &lt;HEAD&gt;</span><br><span class="line">        &lt;meta http-equiv=&quot;Content-Language&quot; content=&quot;zh-cn&quot;&gt;</span><br><span class="line">        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">        &lt;LINK href=&quot;$&#123;pageContext.request.contextPath&#125;/css/Style1.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">    &lt;/HEAD&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!--  --&gt;</span><br><span class="line">        &lt;form id=&quot;userAction_save_do&quot; name=&quot;Form1&quot; action=&quot;$&#123;pageContext.request.contextPath&#125;/adminAddProduct&quot; method=&quot;post&quot;&gt;</span><br><span class="line">            &amp;nbsp;</span><br><span class="line">            &lt;table cellSpacing=&quot;1&quot; cellPadding=&quot;5&quot; width=&quot;100%&quot; align=&quot;center&quot; bgColor=&quot;#eeeeee&quot; style=&quot;border: 1px solid #8ba7e3&quot; border=&quot;0&quot;&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; align=&quot;center&quot; bgColor=&quot;#afd1f3&quot; colSpan=&quot;4&quot;</span><br><span class="line">                        height=&quot;26&quot;&gt;</span><br><span class="line">                        &lt;strong&gt;&lt;STRONG&gt;添加商品&lt;/STRONG&gt;</span><br><span class="line">                        &lt;/strong&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品名称：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;pname&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        是否热门：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;select name=&quot;is_hot&quot;&gt;</span><br><span class="line">                            &lt;option value=&quot;1&quot;&gt;是&lt;/option&gt;</span><br><span class="line">                            &lt;option value=&quot;0&quot;&gt;否&lt;/option&gt;</span><br><span class="line">                        &lt;/select&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        市场价格：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;market_price&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商城价格：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;text&quot; name=&quot;shop_price&quot; value=&quot;&quot; id=&quot;userAction_save_do_logonName&quot; class=&quot;bg&quot;/&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品图片：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;input type=&quot;file&quot; name=&quot;pimage&quot; /&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        所属分类：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;select name=&quot;cid&quot;&gt;</span><br><span class="line">                            &lt;c:forEach items=&quot;$&#123;categoryList &#125;&quot; var=&quot;category&quot;&gt;</span><br><span class="line">                                    &lt;option value=&quot;$&#123;category.cid &#125;&quot;&gt;$&#123;category.cname &#125;&lt;/option&gt;</span><br><span class="line">                            &lt;/c:forEach&gt;</span><br><span class="line">                            </span><br><span class="line">                        &lt;/select&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td width=&quot;18%&quot; align=&quot;center&quot; bgColor=&quot;#f5fafe&quot; class=&quot;ta_01&quot;&gt;</span><br><span class="line">                        商品描述：</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; bgColor=&quot;#ffffff&quot; colspan=&quot;3&quot;&gt;</span><br><span class="line">                        &lt;textarea name=&quot;pdesc&quot; rows=&quot;5&quot; cols=&quot;30&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td class=&quot;ta_01&quot; style=&quot;WIDTH: 100%&quot; align=&quot;center&quot;</span><br><span class="line">                        bgColor=&quot;#f5fafe&quot; colSpan=&quot;4&quot;&gt;</span><br><span class="line">                        &lt;button type=&quot;submit&quot; id=&quot;userAction_save_do_submit&quot; value=&quot;确定&quot; class=&quot;button_ok&quot;&gt;</span><br><span class="line">                            确认;</span><br><span class="line">                        &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;FONT face=&quot;宋体&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/FONT&gt;</span><br><span class="line">                        &lt;button type=&quot;reset&quot; value=&quot;重置&quot; class=&quot;button_cancel&quot;&gt;重置&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">                        &lt;FONT face=&quot;宋体&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/FONT&gt;</span><br><span class="line">                        &lt;INPUT class=&quot;button_ok&quot; type=&quot;button&quot; onclick=&quot;history.go(-1)&quot; value=&quot;返回&quot;/&gt;</span><br><span class="line">                        &lt;div&gt;$&#123;isSuccess==true?&quot;添加成功&quot;:&quot;添加失败&quot; &#125;&lt;/div&gt;</span><br><span class="line">                        &lt;span id=&quot;Label1&quot;&gt;&lt;/span&gt;</span><br><span class="line">                    &lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/table&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-web层AdminProductService"><a href="#2-web层AdminProductService" class="headerlink" title="2 web层AdminProductService"></a>2 web层AdminProductService</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">package www.test.web;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.lang.reflect.InvocationTargetException;</span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.text.SimpleDateFormat;</span><br><span class="line">import java.util.Date;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.UUID;</span><br><span class="line"></span><br><span class="line">import javax.servlet.ServletException;</span><br><span class="line">import javax.servlet.http.HttpServlet;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line">import org.apache.commons.beanutils.BeanUtils;</span><br><span class="line"></span><br><span class="line">import www.test.domain.Product;</span><br><span class="line">import www.test.service.AdminProductService;</span><br><span class="line"></span><br><span class="line">public class AdminAddProductServlet extends HttpServlet &#123;</span><br><span class="line"></span><br><span class="line">    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line">        //解决乱码问题</span><br><span class="line">        request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">        //获取数据</span><br><span class="line">        Map&lt;String, String[]&gt; parameterMap = request.getParameterMap();</span><br><span class="line">        //使用BeanUtils进行子映射封装</span><br><span class="line">        Product  product = new Product();</span><br><span class="line">        try &#123;</span><br><span class="line">            BeanUtils.populate(product, parameterMap);</span><br><span class="line">        &#125; catch (IllegalAccessException | InvocationTargetException e) &#123;</span><br><span class="line">            </span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        //此位置Product已经封装完毕----将表单的数据封装完毕</span><br><span class="line">        //手动设置表单中没有数据</span><br><span class="line">        //1）private String pid;</span><br><span class="line">        product.setPid(UUID.randomUUID().toString().replaceAll(&quot;-&quot;, &quot;&quot;));</span><br><span class="line">        //2）private String pimage;</span><br><span class="line">        product.setPimage(&quot;products/1/c_0033.jpg&quot;);</span><br><span class="line">       //3）private String pdate;//上架日期</span><br><span class="line">        SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">        String pdate = format.format(new Date());</span><br><span class="line">        product.setPdate(pdate);</span><br><span class="line">        //4）private int pflag;//商品是否下载 0代表未下架</span><br><span class="line">        product.setPflag(0);</span><br><span class="line">       </span><br><span class="line">        // 3 传递数据给service层</span><br><span class="line">        AdminProductService service = new AdminProductService();</span><br><span class="line">        boolean isSuccess = true;</span><br><span class="line">        try &#123;</span><br><span class="line">            isSuccess = service.addProduct(product);</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            </span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        //将处理结果存储到request域中</span><br><span class="line">        request.setAttribute(&quot;isSuccess&quot;, isSuccess);</span><br><span class="line">         //跳转到列表页面</span><br><span class="line">        //response.sendRedirect(request.getContextPath()+&quot;/adminProductList&quot;);</span><br><span class="line">        request.getRequestDispatcher(&quot;admin/product/add.jsp&quot;).forward(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span><br><span class="line">        doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-service层AdminProductService"><a href="#3-service层AdminProductService" class="headerlink" title="3 service层AdminProductService"></a>3 service层AdminProductService</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">package www.test.service;</span><br><span class="line"></span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import www.test.dao.AdminProductDao;</span><br><span class="line">import www.test.domain.Category;</span><br><span class="line">import www.test.domain.Product;</span><br><span class="line"></span><br><span class="line">public class AdminProductService &#123;</span><br><span class="line"></span><br><span class="line">    public List&lt;Product&gt; findAllProduct() throws SQLException &#123;</span><br><span class="line"></span><br><span class="line">         //因为没有复杂业务 直接传递请求到dao层</span><br><span class="line">        AdminProductDao dao = new AdminProductDao();</span><br><span class="line">        return dao.findAllProduct();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    public List&lt;Category&gt; findAllCategory() throws SQLException &#123;</span><br><span class="line">        </span><br><span class="line">        AdminProductDao dao = new AdminProductDao();</span><br><span class="line">        return dao.finAllCategory();</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 添加商品</span><br><span class="line">    public boolean addProduct(Product product) throws SQLException &#123;</span><br><span class="line">        AdminProductDao dao = new AdminProductDao();</span><br><span class="line">        return dao.addProduct(product);</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-dao层AdminProductDao"><a href="#4-dao层AdminProductDao" class="headerlink" title="4 dao层AdminProductDao"></a>4 dao层AdminProductDao</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package www.test.dao;</span><br><span class="line"></span><br><span class="line">import java.sql.SQLException;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import org.apache.commons.dbutils.QueryRunner;</span><br><span class="line">import org.apache.commons.dbutils.handlers.BeanListHandler;</span><br><span class="line"></span><br><span class="line">import www.test.domain.Category;</span><br><span class="line">import www.test.domain.Product;</span><br><span class="line">import www.test.utils.C3P0Utils;</span><br><span class="line"></span><br><span class="line">public class AdminProductDao &#123;</span><br><span class="line"></span><br><span class="line">    public List&lt;Product&gt; findAllProduct() throws SQLException &#123;</span><br><span class="line">        </span><br><span class="line">        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());</span><br><span class="line">        String sql = &quot;select * from product&quot;;</span><br><span class="line">        List&lt;Product&gt; productList = qr.query(sql, new BeanListHandler&lt;Product&gt;(Product.class));</span><br><span class="line">        return productList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public List&lt;Category&gt; finAllCategory() throws SQLException &#123;</span><br><span class="line">        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());</span><br><span class="line">        String sql = &quot;select * from category&quot;;</span><br><span class="line">        List&lt;Category&gt; categoryList = qr.query(sql, new BeanListHandler&lt;Category&gt;(Category.class));</span><br><span class="line">        return categoryList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //添加数据</span><br><span class="line">    public boolean addProduct(Product product) throws SQLException &#123;</span><br><span class="line">        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());</span><br><span class="line">        String sql = &quot;insert into product values(?,?,?,?,?,?,?,?,?,?)&quot;;</span><br><span class="line">        Object[] params = &#123;product.getPid(),product.getPname(),product.getMarket_price(),product.getShop_price(),product.getPimage(),product.getPdate(),product.getIs_hot(),product.getPdesc(),product.getPflag(),product.getCid()&#125;;</span><br><span class="line">        int num = qr.update(sql, params);</span><br><span class="line">        if(num&gt;0)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA数组反转/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:26:31.801Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA数组反转/">JAVA数组反转</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">IGeek</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例二(获取三个数中的最大值)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:43.258Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例二(获取三个数中的最大值)/">JAVA案例二(获取三个数中的最大值)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JSP</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+	  <span id="busuanzi_container_page_pv">
+  |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/26/IGeek案例2-添加商品/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例三(键盘录入三个数据获取最大值)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:37.060Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/26/IGeek案例1-后台商品列表的展示/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IGeek案例1-后台商品列表的展示</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例三(键盘录入三个数据获取最大值)/">JAVA案例三(键盘录入三个数据获取最大值)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#案例2-添加商品"><span class="toc-number">1.</span> <span class="toc-text">案例2-添加商品</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-页面一加载就能动态的获取所有的分类"><span class="toc-number">1.1.</span> <span class="toc-text">1 页面一加载就能动态的获取所有的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建category表"><span class="toc-number">1.1.1.</span> <span class="toc-text">1 创建category表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-category表中添加数据"><span class="toc-number">1.1.2.</span> <span class="toc-text">2 category表中添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3admin-product-list-jsp添加处理servlet"><span class="toc-number">1.1.3.</span> <span class="toc-text">3admin/product/list.jsp添加处理servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-web层-AdminAddProductUIServlet"><span class="toc-number">1.1.4.</span> <span class="toc-text">4 web层 AdminAddProductUIServlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-service层AdminProductService"><span class="toc-number">1.1.5.</span> <span class="toc-text">5 service层AdminProductService</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-dao层AdminProductDao"><span class="toc-number">1.1.6.</span> <span class="toc-text">6 dao层AdminProductDao</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-admin-product-add-jsp代码"><span class="toc-number">1.1.7.</span> <span class="toc-text">7 /admin/product/add.jsp代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-添加商品"><span class="toc-number">1.2.</span> <span class="toc-text">2 添加商品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-给确认按钮所在表单的form添加servlet"><span class="toc-number">1.2.1.</span> <span class="toc-text">1 给确认按钮所在表单的form添加servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-web层AdminProductService"><span class="toc-number">1.2.2.</span> <span class="toc-text">2 web层AdminProductService</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-service层AdminProductService"><span class="toc-number">1.2.3.</span> <span class="toc-text">3 service层AdminProductService</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-dao层AdminProductDao"><span class="toc-number">1.2.4.</span> <span class="toc-text">4 dao层AdminProductDao</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例四(for循环实现统计水仙花的个数)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:27.236Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例四(for循环实现统计水仙花的个数)/">for循环实现统计水仙花的个数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例五(猜数字小游戏)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:18.988Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例五(猜数字小游戏)/">猜数字小游戏</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例六(数组获取最值)/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:10.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例六(数组获取最值)/">数组获取最值(获取数组中的最大值最小值)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/方法的练习之数组元素求和/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:09:03.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/方法的练习之数组元素求和/">方法的练习之数组元素求和</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/打印5位数中所有的回文数/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:08:56.309Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/打印5位数中所有的回文数/">打印5位数中所有的回文数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/不死神兔问题/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:08:49.914Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/不死神兔问题/">不死神兔问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/26/JAVA案例——裁判评分/" class="archive-article-date">
-  	<time datetime="2019-08-26T07:08:16.465Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/26/JAVA案例——裁判评分/">JAVA案例——裁判评分</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -612,8 +457,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
